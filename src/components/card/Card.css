@@ -1,0 +1,188 @@
+.Card {
+    width: 320px;
+    margin: 0 40px 40px 40px;
+}
+
+.Card__content {
+    width: 320px;
+    height: 480px;
+    display:inline-block;
+    border:4px solid #1698D9;
+    background-color: #F2F2F2;
+    border-radius: 12px;
+    background:
+        linear-gradient(  45deg, #1698D9 0 calc(0px + 5px) ,transparent 0) bottom left /50% 50%,
+        linear-gradient( -45deg, #1698D9 0 calc(0px + 5px),transparent 0) bottom right/50% 50%,
+        linear-gradient( 135deg, #1698D9 0 calc(20px + 5px),transparent 0) top left/50% 50%,
+        linear-gradient(-135deg, #1698D9 0 calc(0px + 5px),transparent 0) top right/50% 50%, #F2F2F2;
+    background-origin:border-box;
+    background-repeat:no-repeat;
+    -webkit-mask:
+        linear-gradient(  45deg, transparent 0 0px,#1698D9 0) bottom left,
+        linear-gradient( -45deg, transparent 0 0px,#1698D9 0) bottom right,
+        linear-gradient( 135deg, transparent 0 20px,#1698D9 0) top left,
+        linear-gradient(-135deg, transparent 0 0px,#1698D9 0) top right;
+    -webkit-mask-size:50.5% 50.5%;
+    -webkit-mask-repeat:no-repeat;
+
+    padding: 21px 51px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.Card__caption {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #666666;
+}
+
+.Card__caption-hovered {
+    display: none;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #E62E7A;
+}
+
+.Card__content.selected:hover .Card__caption.hovered{
+    display: none;
+}
+
+.Card__content.selected:hover .Card__caption-hovered.hovered{
+    display: block;
+}
+
+.Card__title {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 56px;
+    color: #000000;
+}
+
+.Card__subtitle {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    color: #000000;
+}
+
+.Card__desc {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #666666;
+    margin-top: 15px;
+}
+
+.Card__img {
+    position: absolute;
+    bottom: -11.59%;
+    left: -7.5%;
+    width: 368px;
+    height: 360px;
+}
+
+.Card__circle {
+    background: #1698D9;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 22px;
+    color: #FFFFFF;
+    display: flex;
+    text-align: center;
+    padding-top: 20px;
+    flex-flow: column;
+}
+
+.Card__content.selected .Card__circle {
+    background: #E52E7A;
+}
+
+.Card__weight {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.caption {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 15px;
+
+    text-align: center;
+
+    color: #FFFFFF;
+    margin-top: 14px;
+}
+
+.caption--blue {
+    color: #22A7E9;
+    cursor: pointer;
+}
+
+.caption--dashed {    
+    border-bottom: 1px solid #22A7E9;
+    border-bottom-style: dashed;
+}
+
+.disabled {
+    border:4px solid #B3B3B3;
+    background:
+        linear-gradient(  45deg, #B3B3B3 0 calc(0px + 5px) ,transparent 0) bottom left /50% 50%,
+        linear-gradient( -45deg, #B3B3B3 0 calc(0px + 5px),transparent 0) bottom right/50% 50%,
+        linear-gradient( 135deg, #B3B3B3 0 calc(20px + 5px),transparent 0) top left/50% 50%,
+        linear-gradient(-135deg, #B3B3B3 0 calc(0px + 5px),transparent 0) top right/50% 50%, #F2F2F2;
+    background-origin:border-box;
+    background-repeat:no-repeat;
+    -webkit-mask:
+        linear-gradient(  45deg, transparent 0 0px,#B3B3B3 0) bottom left,
+        linear-gradient( -45deg, transparent 0 0px,#B3B3B3 0) bottom right,
+        linear-gradient( 135deg, transparent 0 20px,#B3B3B3 0) top left,
+        linear-gradient(-135deg, transparent 0 0px,#B3B3B3 0) top right;
+    -webkit-mask-size:50.5% 50.5%;
+    -webkit-mask-repeat:no-repeat;
+    cursor:default;
+}
+
+.Card__content.disabled .Card__caption,
+.Card__content.disabled .Card__title,
+.Card__content.disabled .Card__subtitle,
+.Card__content.disabled .Card__desc {
+    color: #B3B3B3;
+}
+
+.Card__content.disabled .Card__img {
+    mix-blend-mode: normal;
+    opacity: 0.5;  
+}
+
+.Card__content.disabled .Card__circle {
+    background: #B3B3B3;
+}
+
+.selected {
+    border:4px solid #E52E7A;
+    background:
+        linear-gradient(  45deg, #E52E7A 0 calc(0px + 5px) ,transparent 0) bottom left /50% 50%,
+        linear-gradient( -45deg, #E52E7A 0 calc(0px + 5px),transparent 0) bottom right/50% 50%,
+        linear-gradient( 135deg, #E52E7A 0 calc(20px + 5px),transparent 0) top left/50% 50%,
+        linear-gradient(-135deg, #E52E7A 0 calc(0px + 5px),transparent 0) top right/50% 50%, #F2F2F2;
+    background-origin:border-box;
+    background-repeat:no-repeat;
+    -webkit-mask:
+        linear-gradient(  45deg, transparent 0 0px,#E52E7A 0) bottom left,
+        linear-gradient( -45deg, transparent 0 0px,#E52E7A 0) bottom right,
+        linear-gradient( 135deg, transparent 0 20px,#E52E7A 0) top left,
+        linear-gradient(-135deg, transparent 0 0px,#E52E7A 0) top right;
+    -webkit-mask-size:50.5% 50.5%;
+    -webkit-mask-repeat:no-repeat;
+}
+
+
